@@ -1,0 +1,10 @@
+.git
+.gitignore
+.gitattributes
+.env.example
+.styleci.yml
+.editorconfig
+.dockerignore
+Dockerfile
+.vscode
+.circleci

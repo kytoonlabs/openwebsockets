@@ -1,11 +1,13 @@
 {
-    "name": "laravel/laravel",
+    "name": "kytoonlabs/openwebsockets",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "The laravel-websockets implementation.",
+    "keywords": ["framework", "laravel", "pusher", "laravel-websockets"],
     "license": "MIT",
+    "version": "1.0.0",
     "require": {
         "php": "^8.0.2",
+        "beyondcode/laravel-websockets": "1.13.1",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.11",
         "laravel/sanctum": "^2.14.1",
