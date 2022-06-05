@@ -8,7 +8,7 @@ return [
      * Set a custom dashboard configuration
      */
     'dashboard' => [
-        'port' => env('LARAVEL_WEBSOCKETS_PORT', 6001),
+        'port' => env('OWS_PORT', 6001),
     ],
 
     /*
@@ -23,14 +23,14 @@ return [
      */
     'apps' => [
         [
-            'id' => env('PUSHER_APP_ID'),
-            'name' => env('APP_NAME'),
-            'key' => env('PUSHER_APP_KEY'),
-            'secret' => env('PUSHER_APP_SECRET'),
-            'path' => env('PUSHER_APP_PATH'),
-            'capacity' => null,
-            'enable_client_messages' => false,
-            'enable_statistics' => true,
+            'id' => env('OWS_APP_ID'),
+            'name' => env('OWS_APP_NAME', "ows"),
+            'key' => env('OWS_APP_KEY'),
+            'secret' => env('OWS_APP_SECRET'),
+            'path' => env('OWS_APP_PATH'),
+            'capacity' => env('OWS_APP_CAPACITY', null),
+            'enable_client_messages' => env('OWS_CLIENT_MESSAGES', false),
+            'enable_statistics' => env('OWS_ENABLE_STATS', true),
         ],
     ],
 
@@ -59,7 +59,7 @@ return [
     /*
      * This path will be used to register the necessary routes for the package.
      */
-    'path' => 'laravel-websockets',
+    'path' => 'ows',
 
     /*
      * Dashboard Routes Middleware
@@ -116,18 +116,18 @@ return [
          * certificate chain of issuers. The private key also may be contained
          * in a separate file specified by local_pk.
          */
-        'local_cert' => env('LARAVEL_WEBSOCKETS_SSL_LOCAL_CERT', null),
+        'local_cert' => env('OWS_SSL_LOCAL_CERT', null),
 
         /*
          * Path to local private key file on filesystem in case of separate files for
          * certificate (local_cert) and private key.
          */
-        'local_pk' => env('LARAVEL_WEBSOCKETS_SSL_LOCAL_PK', null),
+        'local_pk' => env('OWS_SSL_LOCAL_PK', null),
 
         /*
          * Passphrase for your local_cert file.
          */
-        'passphrase' => env('LARAVEL_WEBSOCKETS_SSL_PASSPHRASE', null),
+        'passphrase' => env('OWS_SSL_PASSPHRASE', null),
     ],
 
     /*
