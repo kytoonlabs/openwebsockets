@@ -11,6 +11,7 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
+            apk add --no-cache make
             docker build . -t kytoonlabs/openwebsockets:latest
       - snyk/scan:
           docker-image-name: kytoonlabs/openwebsockets:latest
