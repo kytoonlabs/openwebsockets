@@ -7,7 +7,7 @@ RUN composer install --no-dev
 
 FROM php:8.1-cli-alpine
 RUN apk update && apk upgrade && \
-    apk add --no-cache mysql mysql-client supervisor && \
+    apk add --no-cache mysql mysql-client supervisor libtool && \
     addgroup mysql mysql && \
     docker-php-ext-install pdo_mysql
 COPY etc /etc
