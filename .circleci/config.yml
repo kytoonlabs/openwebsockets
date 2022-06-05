@@ -10,6 +10,10 @@ jobs:
       - setup_remote_docker:
           version: 20.10.14
       - run:
+          name: Adding Dependencies
+          command: |
+            apk add --no-cache curl jq
+      - run:
           name: Build Docker Image
           command: |
             docker build . -t kytoonlabs/openwebsockets:latest
@@ -25,7 +29,6 @@ jobs:
       - run:
           name: Push to Docker Hub
           command: |
-            apk add --no-cache jq
             TAG=$(cat composer.json | jq -r '.version')
             docker tag kytoonlabs/openwebsockets:latest kytoonlabs/openwebsockets:$TAG
             docker push kytoonlabs/openwebsockets:$TAG
