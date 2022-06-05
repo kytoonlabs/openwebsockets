@@ -4,9 +4,10 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/base:2022.05
+      - image: docker:20.10
     steps:
       - checkout
+      - setup_remote_docker
       - run:
           name: Build Docker Image
           command: |
@@ -16,7 +17,23 @@ jobs:
           severity-threshold: high
           fail-on-issues: true
           monitor-on-build: true
+      - run:
+          name: Login Docker Hub
+          command: |
+            echo "${DOCKER_HUB_PASSWORD}" | docker login --username ${DOCKER_HUB_USERNAME} --password-stdin
+      - run:
+          name: Push to Docker Hub
+          command: |
+            apk add --no-cache jq
+            TAG=$(cat composer.json | jq -r '.version')
+            docker tag kytoonlabs/openwebsockets:latest kytoonlabs/openwebsockets:$TAG
+            docker push kytoonlabs/openwebsockets:$TAG
+            docker push kytoonlabs/openwebsockets:latest
 workflow:
   build-image:
     jobs:
-      - build
+      - build:
+          filters:
+              branches:
+                only:
+                  - main
