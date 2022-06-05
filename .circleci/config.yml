@@ -1,0 +1,22 @@
+version: 2.1
+orbs:
+  snyk: snyk/snyk@1.1.2
+jobs:
+  build:
+    docker:
+      - image: cimg/base:2022.05
+    steps:
+      - checkout
+      - run:
+          name: Build Docker Image
+          command: |
+            docker build . -t kytoonlabs/openwebsockets:latest
+      - snyk/scan:
+          docker-image-name: kytoonlabs/openwebsockets:latest
+          severity-threshold: high
+          fail-on-issues: true
+          monitor-on-build: true
+workflow:
+  build-image:
+    jobs:
+      - build
