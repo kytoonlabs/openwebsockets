@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Adding Dependencies
           command: |
-            apk add --no-cache curl jq
+            apk add --no-cache curl wget libstdc++ sudo jq
       - run:
           name: Build Docker Image
           command: |
