@@ -4,14 +4,13 @@ orbs:
 jobs:
   build:
     docker:
-      - image: docker:20.10
+      - image: cimg/base:2022.05
     steps:
       - checkout
       - setup_remote_docker
       - run:
           name: Build Docker Image
           command: |
-            apk add --no-cache make
             docker build . -t kytoonlabs/openwebsockets:latest
       - snyk/scan:
           docker-image-name: kytoonlabs/openwebsockets:latest
