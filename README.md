@@ -1,3 +1,5 @@
+[![Security Rating](https://sonarqube.lab.kytoonlabs.com/api/project_badges/measure?project=kytoonlabs_openwebsockets_AYFLWxlcG9VkHk7uz0ao&metric=security_rating&token=302f64d25af2f640a60b4b346c72555e0b33a6b7)](https://sonarqube.lab.kytoonlabs.com/dashboard?id=kytoonlabs_openwebsockets_AYFLWxlcG9VkHk7uz0ao) [![Vulnerabilities](https://sonarqube.lab.kytoonlabs.com/api/project_badges/measure?project=kytoonlabs_openwebsockets_AYFLWxlcG9VkHk7uz0ao&metric=vulnerabilities&token=302f64d25af2f640a60b4b346c72555e0b33a6b7)](https://sonarqube.lab.kytoonlabs.com/dashboard?id=kytoonlabs_openwebsockets_AYFLWxlcG9VkHk7uz0ao)
+
 # OpenWebSockets
 
 OWS is a implementation of [laravel-websockets](https://beyondco.de/docs/laravel-websockets/getting-started/introduction), created to be used in a standalone fashion under docker, docker-compose or kubernetes scenarios.
