@@ -1,4 +1,5 @@
 [![Security Rating](https://sonarqube.lab.kytoonlabs.com/api/project_badges/measure?project=kytoonlabs_openwebsockets_AYFLWxlcG9VkHk7uz0ao&metric=security_rating&token=302f64d25af2f640a60b4b346c72555e0b33a6b7)](https://sonarqube.lab.kytoonlabs.com/dashboard?id=kytoonlabs_openwebsockets_AYFLWxlcG9VkHk7uz0ao) [![Vulnerabilities](https://sonarqube.lab.kytoonlabs.com/api/project_badges/measure?project=kytoonlabs_openwebsockets_AYFLWxlcG9VkHk7uz0ao&metric=vulnerabilities&token=302f64d25af2f640a60b4b346c72555e0b33a6b7)](https://sonarqube.lab.kytoonlabs.com/dashboard?id=kytoonlabs_openwebsockets_AYFLWxlcG9VkHk7uz0ao)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkytoonlabs%2Fopenwebsockets.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkytoonlabs%2Fopenwebsockets?ref=badge_shield)
 
 # OpenWebSockets
 
@@ -73,3 +74,6 @@ If you'd like to report a bug, give us feedback, or contribute to OpenWebSockets
 ## License
 
 OpenWebSockets is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkytoonlabs%2Fopenwebsockets.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkytoonlabs%2Fopenwebsockets?ref=badge_large)
