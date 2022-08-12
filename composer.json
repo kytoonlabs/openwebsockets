@@ -4,7 +4,7 @@
     "description": "The laravel-websockets implementation.",
     "keywords": ["framework", "laravel", "pusher", "laravel-websockets"],
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "require": {
         "php": "^8.0.2",
         "beyondcode/laravel-websockets": "1.13.1",
